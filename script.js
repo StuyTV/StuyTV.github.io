@@ -28,7 +28,7 @@ function work() {
     var list_expand = setInterval(() => {
         document.querySelector("#dropdown").style.height = `${height_list}px`
         height_list += 10
-        if (height_list == 220) {
+        if (height_list == 230) {
             document.querySelector("#dropdown").style.height = `${height_list}px`
             document.querySelector("#dropbtn").removeAttribute("disabled")
             clearInterval(list_expand)
