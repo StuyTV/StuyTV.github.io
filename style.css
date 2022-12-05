@@ -86,7 +86,7 @@ body {
     position: absolute;
     background-color:#749cdd;
     border: 1px solid #749cdd;
-    border-radius: 1px;
+    border-radius: 3px;
 }
 #dropbtn div {
     width: 35px;
@@ -188,21 +188,21 @@ body {
     padding: 5px 15px; 
     min-height: 300px;
     width: 80vw;
-    border: 2px solid rgba(18,9,62,255);
+    border: 2px solid #749cdd;
     border-radius: 15px;
-    background-color: rgba(18,9,62,255);
+    background-color: #749cdd;
     text-align: center;
     
 }
 .card p a {
     transition: 0.3s;
-}
-.card p a:link {
     color: white;
+    font-size: 40px;
 }
 
+
 .card p a:hover {
-    color: rgb(116, 156, 221);
+    color: #0c5ffa;
     
 }
 
