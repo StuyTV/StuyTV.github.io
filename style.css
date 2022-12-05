@@ -1,19 +1,26 @@
 html {
     scroll-behavior: smooth;
 }
+
 @font-face {
     font-family: 'Montserrat';
     src: url('fonts/Montserrat-Light.otf');
 }
+@font-face {
+    font-family: 'Rubik';
+    src: url("fonts/Rubik-VariableFont_wght.ttf");
+}
+
+
 
 #mainheading {
-    
+    z-index: 1;
     padding: 10px 5px 10px 5px;
     position:fixed;
-    height:6vw;
+    height:90px;
     width:99.5%;
-    background-color: rgb(71, 129, 221);
-    border-bottom: 3px solid  rgb(116, 156, 221);
+    background-color: #0c5ffa; 
+    border-bottom: 3px solid #749cdd;
 }
 #heading {
     text-align: center;
@@ -26,24 +33,23 @@ html {
    position:absolute;
    top:0;
    left: 0;
-    height: 60px;
-    width: 60px;
+    height: 90px;
+    width: 90px;
     
 
-}
-h1, h6 { 
-    margin: 0;
 }
 #h1time {
     width: 1000px;
     position: absolute;
-    margin-left: auto;
+    /* margin-left: auto;
     margin-right: auto;
     margin-top: 0;
     margin-bottom: 0;
     left: 0;
-    right: 0;
-    text-align: center;
+    right: 0; 
+    text-align: center; */
+    left: 50%;
+    transform: translateX(-50%);
     
     opacity: 0;
     transition: opacity 2s;
@@ -52,15 +58,19 @@ h1, h6 {
     letter-spacing: .2rem;
     font-size: 25px;
 }
+h1 {
+    margin: 1px;
+}
+h6 {
+    margin: 1px;
+}
 
 body {
-    font-family: 'Montserrat';
-    background-color: rgb(178, 198, 231);
+    font-family: 'Rubik';
+    background-color: #0c5ffa;
     margin: 0;
+    color: white;
     
-}
-#dropdown { 
-    margin-top: 47px;
 }
 @media screen and (max-width: 1600px) {
     #navy {
@@ -74,13 +84,14 @@ body {
     top: 0 ;
     right: 10px ;
     position: absolute;
-    border: 1px solid rgb(116, 156, 221);
+    background-color:#749cdd;
+    border: 1px solid #749cdd;
     border-radius: 1px;
 }
 #dropbtn div {
     width: 35px;
     height: 5px;
-    background-color: rgb(71, 129, 221);
+    background-color: #0c5ffa;
     margin: 6px 0;
     border-radius: 3px;
 }
@@ -98,20 +109,14 @@ body {
 }
 #navbartoggle ul {
     
-    
+    margin-top: 55px;
     overflow: hidden;
+    height: 0px;
     
-    
-}
-#navy ul {
-    margin: 5px;
 }
 #navy ul, #navbartoggle ul {
     list-style-type: none; 
-    width: 10vw;
-    
-    padding: 0;
-    
+
   }
 #navy ul li {
     display: inline;
@@ -122,35 +127,181 @@ body {
     margin: 5px;
 }
 #navy ul li, #navbartoggle ul li {
-    
-    background-color: #f1f1f1;
+    transition: 0.3s;
+    background-color: #749cdd;
     
     padding: 10px;
-    border: 2px solid black;
+    border: 2px solid #0062ff;
     border-radius: 10px;
-    font-size:18px;
+    font-size:20px;
 }
 #navy ul li a, #navbartoggle ul li a {
     text-align: center;
     font-weight: bold;
-    color: #000;
+    color: white;
     
     text-decoration: none;
 }
+#navbartoggle ul li a p
+{
+    margin: 0;
+    min-width: 120px;
+    
+}
 #navy ul li:hover, #navbartoggle  ul li:hover {
     background-color: rgb(116, 156, 221);
-    transition: 0.3s;
+    
+}
+
+#spacer {
+    height: 115px;
 }
 
 
 
-
-
+.canvas_for_three {
+    overflow-x: hidden;
+}
+/* .stuffyRealLink {
+    display:block;
+    padding: 60px;
+} */
 .stuffy {
-    
-    padding-top: 60px;
+    margin: 0;
+    padding:10px;
 }
 .stuffytitle {
+    margin: 0;
     font-size: 50px;
     font-weight:bolder;
+}
+.spbord {
+    aspect-ratio: 960/100;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+.card {
+    font-size: 20px;
+    padding: 5px 15px; 
+    min-height: 300px;
+    width: 80vw;
+    border: 2px solid rgba(18,9,62,255);
+    border-radius: 15px;
+    background-color: rgba(18,9,62,255);
+    text-align: center;
+    
+}
+.card p a {
+    transition: 0.3s;
+}
+.card p a:link {
+    color: white;
+}
+
+.card p a:hover {
+    color: rgb(116, 156, 221);
+    
+}
+
+@media screen and (max-width: 1100px) {
+    .cardSet {
+        flex-direction: column !important;
+        margin: 0 !important;
+    }
+    .photoCard {
+        margin: 10px !important;
+        width: 60vw !important;
+        aspect-ratio: 4/4.3 !important;
+    }
+    .role, .name {
+        font-size:6vw !important;
+    }
+    .bio {
+        font-size: 3vw !important;
+    }
+  }
+
+.cardSet {
+    justify-content: space-evenly;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
+.photoCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 22%;
+    
+    transition: 0.3s;
+    border-radius: 10px;
+    border: 2px solid #12093e;
+    
+    aspect-ratio: 2/2.4;
+    background-color: #12093e;
+}
+.photoCard:hover {
+    
+    box-shadow: -0.5vw 0.5vw #192a49, -1vw 1vw #365d64;
+}
+
+.photoCard img {
+    margin-top: 10px;
+    height: auto;
+    width: 60%;
+    border-radius: 50%;
+}
+.photoCard p {
+    margin:0;
+}
+.name, .role {
+    font-size: 2vw;
+}
+.name {
+    font-weight: bolder;
+}
+.role {
+    opacity: 0.9;
+    font-style: italic;
+}
+.bio {
+    font-size: 1.5vw;
+}
+
+.dflt {
+    min-height: 400px;
+    justify-content: center;
+}
+
+.layer1 {
+    background-image: url("svgstuff/truefirstborder.svg")
+}
+.layer2 {
+    background-image: url("svgstuff/darktolight.svg");
+}
+.layer3 {
+    background-image: url("svgstuff/lighttodark.svg");
+}
+.sector {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    
+}
+.sector p {
+    margin: 10px;
+}
+.sector .cardSet {
+    margin: 10px;
+}
+.spec {
+    background: #749cdd;
 }
